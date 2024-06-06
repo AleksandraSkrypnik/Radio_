@@ -4,31 +4,18 @@ import org.junit.jupiter.api.Test;
 public class RadioTest {
 
     @Test
-    public void shouldSetToAcceptableStation() {
-        Radio station = new Radio();
+    public void shouldAcceptableCountOfRadioStation() {
+        Radio radio = new Radio(56);
 
-        station.setCurrentRadioStation(5);
+        radio.setCurrentRadioStation(54);
 
-        int expected = 5;
-        int actual = station.getCurrentRadioStation();
-
+        int expected = 54;
+        int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void shouldSetToMoreThenMaxStation() {
-        Radio station = new Radio();
-
-        station.setCurrentRadioStation(12);
-
-        int expected = 0;
-        int actual = station.getCurrentRadioStation();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void shouldSetLessThanMinStation() {
+    public void shouldSetLessThanMinCountOfRadioStation() {
         Radio station = new Radio();
 
         station.setCurrentRadioStation(-1);
@@ -40,7 +27,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldSetIfStationIsNull() {
+    public void shouldSetIfCountOfRadioStationIsNull() {
         Radio station = new Radio();
 
         station.setCurrentRadioStation(0);
@@ -52,7 +39,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldSetIfStationIsOne() {
+    public void shouldSetIfCountOfRadioStationIsOne() {
         Radio station = new Radio();
 
         station.setCurrentRadioStation(1);
@@ -64,44 +51,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldSetIfStationIsEight() {
-        Radio station = new Radio();
-
-        station.setCurrentRadioStation(8);
-
-        int expected = 8;
-        int actual = station.getCurrentRadioStation();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void shouldSetIfStationIsNine() {
-        Radio station = new Radio();
-
-        station.setCurrentRadioStation(9);
-
-        int expected = 9;
-        int actual = station.getCurrentRadioStation();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void shouldSetIfStationIsTen() {
-        Radio station = new Radio();
-
-        station.setCurrentRadioStation(10);
-
-        int expected = 0;
-        int actual = station.getCurrentRadioStation();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-
-    @Test
-    public void shouldNextIfCurrentStationIsFive() {
+    public void shouldNextIfCurrentStationIsFiveIfCountOfRadioStationByDefault() {
         Radio station = new Radio();
         station.setCurrentRadioStation(5);
         station.nextRadioStation();
@@ -113,7 +63,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldNextIfCurrentStationIsNull() {
+    public void shouldNextIfCurrentStationIsNullIfCountOfRadioStationByDefault() {
         Radio station = new Radio();
         station.setCurrentRadioStation(0);
         station.nextRadioStation();
@@ -125,7 +75,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldNextIfCurrentStationIsOne() {
+    public void shouldNextIfCurrentStationIsOneIfCountOfRadioStationByDefault() {
         Radio station = new Radio();
         station.setCurrentRadioStation(1);
         station.nextRadioStation();
@@ -137,7 +87,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldNextIfCurrentStationIsEight() {
+    public void shouldNextIfCurrentStationIsEightIfCountOfRadioStationByDefault() {
         Radio station = new Radio();
         station.setCurrentRadioStation(8);
         station.nextRadioStation();
@@ -149,7 +99,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldNextIfCurrentStationIsNine() {
+    public void shouldNextIfCurrentStationIsNineIfCountOfRadioStationByDefault() {
         Radio station = new Radio();
         station.setCurrentRadioStation(9);
         station.nextRadioStation();
@@ -161,7 +111,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldPrevIfCurrentStationIsFive() {
+    public void shouldPrevIfCurrentStationIsFiveIfCountOfRadioStationByDefault() {
         Radio station = new Radio();
         station.setCurrentRadioStation(5);
         station.prevRadioStation();
@@ -173,7 +123,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldPrevIfCurrentStationIsNull() {
+    public void shouldPrevIfCurrentStationIsNullIfCountOfRadioStationByDefault() {
         Radio station = new Radio();
         station.setCurrentRadioStation(0);
         station.prevRadioStation();
@@ -185,7 +135,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldPrevIfCurrentStationIsOne() {
+    public void shouldPrevIfCurrentStationIsOneIfCountOfRadioStationByDefault() {
         Radio station = new Radio();
         station.setCurrentRadioStation(1);
         station.prevRadioStation();
@@ -197,7 +147,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldPrevIfCurrentStationIsEight() {
+    public void shouldPrevIfCurrentStationIsEightIfCountOfRadioStationByDefault() {
         Radio station = new Radio();
         station.setCurrentRadioStation(8);
         station.prevRadioStation();
@@ -209,7 +159,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldPrevIfCurrentStationIsNine() {
+    public void shouldPrevIfCurrentStationIsNineIfCountOfRadioStationByDefault() {
         Radio station = new Radio();
         station.setCurrentRadioStation(9);
         station.prevRadioStation();
