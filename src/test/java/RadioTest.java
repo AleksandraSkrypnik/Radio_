@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 public class RadioTest {
 
     @Test
-    public  void shouldAcceptableCountOfRadioStation() {
+    public void shouldAcceptableCountOfRadioStation() {
         Radio radio = new Radio(56);
 
         radio.setCurrentRadioStation(54);
